@@ -1,0 +1,96 @@
+.navbar {
+    border-radius: 2px;
+    padding-right: 10px:
+       
+}
+
+.nav>li>a {
+    margin-right: 15px;
+}
+.nav>li>a#home:hover{
+    border-bottom: 4px solid red;
+}
+.nav>li>a#about:hover{
+    border-bottom: 4px solid #0ebeff;
+}
+.nav>li>a#portfolio:hover{
+    border-bottom: 4px solid #FFDD40;
+}
+.nav>li>a#Contact:hover{
+    border-bottom: 4px solid #47CF73;
+}
+
+.nav>li.dropdown>a#Social:hover{
+    border-bottom: 4px solid #AE63E4;
+}
+/*color fondo menu social*/
+.nav>li.dropdown>ul.dropdown-menu{
+    background-color: #010101;
+   
+}
+.nav>li.dropdown>ul.dropdown-menu:hover{
+    background-color: rgba(0.0.0);
+   
+}
+.nav>li.dropdown>ul.dropdown-menu>li>a{
+    color: aliceblue;
+}
+
+#info {
+    margin-top: 160px;
+    margin-bottom: 200px;
+}
+
+.img-logo {
+    padding: 10px 0px 10px 20px;
+    width: 140px;
+}
+.img-logo:hover{
+    
+    filter:brightness(135%);
+}
+.title-primary{
+    font-family: 'Lobster', cursive;
+    font-size: 70px;
+}
+.stylish-panel {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.stylish-panel > div > div {
+    padding: 10px;
+    border: 2px ridge rgba(192, 192, 192, 0.3);
+    border-radius: 6px;
+    transition: 0.2s;
+    box-shadow: 5px 5px 5px #888888;
+    margin-bottom: 12px;
+}
+
+.stylish-panel > div:hover > div {
+    margin-top: -10px;
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    background: rgba(200, 200, 200, 0.1);
+    transition: 0.5s;
+}
+#contact{
+  margin-bottom: 200px;
+}
+.contact-description{
+  padding: 90px;
+}
+footer{
+    background: #0db294;
+    color: aliceblue;
+    height: 280px;
+    
+}
+footer div{
+    padding: 10px;
+}
+.footer-first{
+    height: 200px;
+    background: #111;
+    padding: 10px;
+}
