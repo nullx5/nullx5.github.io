@@ -14,7 +14,10 @@
     <script src="https://use.fontawesome.com/e7a915ff5b.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 
 <body>
@@ -56,6 +59,8 @@
 
         </nav>
       <div id="about">
+          <p>Your Ip Public <strong id=ip></strong></p>
+
         <hr />
         <div>
           <br />
@@ -213,7 +218,12 @@
         </div>
 
     </footer>
+<script>
+$.get("http://ipinfo.io", function(response){
+	$("#ip").text(response.ip);
+}, "jsonp")
 
+</script>
 </body>
 
 </html>
