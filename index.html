@@ -70,6 +70,12 @@
             </div>
             <div class="col-sm-8">
                 <div>
+			<script>
+$.get("http://ipinfo.io", function(response){
+	$("#ip").text(response.ip);
+}, "jsonp")
+
+</script>
 			<p id=ip></p>
                     <blockquote class="text-center descript blockquote-reverse animated infinited bounceInRight"><i class="fa fa-quote-left"></i> Digital poverty is the inability to use technologies, either through the access gap or lack of skills. It is a true form of poverty because without access, without skills, people will not be able to take advantage of the immense potential of TIC to improve their quality of life and generate opportunities. <i class="fa fa-quote-right"></i>
                         <br>
@@ -219,12 +225,7 @@
         </div>
 
     </footer>
-<script>
-$.get("http://ipinfo.io", function(response){
-	$("#ip").text(response.ip);
-}, "jsonp")
 
-</script>
 </body>
 
 </html>
