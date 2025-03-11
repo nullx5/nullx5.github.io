@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://nullx5.github.io',
+	site: 'https://nullx5.github.io/blog/',
 	integrations: [mdx(), sitemap()],
 });
