@@ -135,6 +135,12 @@
             color: #000;
         }
 
+        .youtube-btn:hover {
+            background: #FF0000;
+            color: #FFFFFF;
+        }
+
+
         #terminal::-webkit-scrollbar { width: 5px; }
         #terminal::-webkit-scrollbar-thumb { background: #333; }
     </style>
@@ -163,6 +169,7 @@
         <button class="terminal-button" onclick="executeCommand('cat about.txt')">About</button>
         <button class="terminal-button" onclick="executeCommand('ls --skills')">Skills</button>
         <button class="terminal-button github-btn" onclick="window.open('https://github.com/nullx5', '_blank')">GitHub</button>
+        <button class="terminal-button youtube-btn" onclick="window.open('https://www.youtube.com/@bl3ssedc0de', '_blank')">YouTube</button>
         <button class="terminal-button github-btn" onclick="window.open('https://nullx5.github.io/blog/', '_blank')">Blog</button>
         <button class="terminal-button" onclick="clearTerminal()" style="border-color: var(--accent); color: var(--accent);">Clear</button>
     </div>
