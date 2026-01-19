@@ -87,7 +87,15 @@
         .line { margin-bottom: 12px; line-height: 1.4; }
         .prompt { color: var(--primary); font-weight: bold; }
         .command-text { color: #ffffff; }
-        .response { color: var(--cyan); margin-top: 5px; }
+        
+        /* Ajustado para permitir saltos de línea manuales y automáticos */
+        .response { 
+            color: var(--cyan); 
+            margin-top: 5px; 
+            white-space: pre-wrap; 
+            word-break: break-word;
+        }
+        
         .skill-item { color: var(--accent); margin-left: 25px; }
 
         .cursor {
@@ -140,7 +148,6 @@
             color: #FFFFFF;
         }
 
-
         #terminal::-webkit-scrollbar { width: 5px; }
         #terminal::-webkit-scrollbar-thumb { background: #333; }
     </style>
@@ -183,7 +190,8 @@
 
     const commandsData = {
         "whoami": "bl3ssedc0de",
-        "cat about.txt": "Tecnólogo en Redes de la UNAD, administrador de sistemas GNU/Linux y entusiasta desarrollador enfocado en Python, MariaDB y automatización de procesos.",
+        /* Texto dividido en dos líneas manualmente */
+        "cat about.txt": "Tecnólogo en Redes de la UNAD, administrador de sistemas GNU/Linux\ny entusiasta desarrollador enfocado en Python, MariaDB y automatización de procesos.",
         "ls --skills": [
             "• Redes TCP/IP", 
             "• GNU/Linux", 
@@ -195,7 +203,19 @@
             "• Python", 
             "• MariaDB", 
             "• Javascript"
-        ]
+        ],
+        "tux": `  _________________
+ < Happy Hacking >
+  -----------------
+   \\
+    \\
+        .--.
+       |o_o |
+       |:_/ |
+      //   \\ \\
+     (|     | )
+    /'\\_   _/ \`\\
+    \\___)=(___/`
     };
 
     async function typeEffect(text, element, speed = 50) {
@@ -240,18 +260,18 @@
         currentLine.style.color = "var(--cyan)";
         await typeEffect("Establishing secure connection to nullx5.github.io...", currentLine, 40);
         
-        // Espera de 6 segundos
         await new Promise(res => setTimeout(res, 6000));
         
         currentLine.innerHTML = "";
         currentLine.style.color = "#fff";
 
-        // Ejecución dinámica de comandos
         await executeCommand('whoami');
         await new Promise(res => setTimeout(res, 1000));
         await executeCommand('cat about.txt');
         await new Promise(res => setTimeout(res, 1000));
         await executeCommand('ls --skills');
+        await new Promise(res => setTimeout(res, 1000));
+        await executeCommand('tux');
     }
 
     window.onload = startSequence;
